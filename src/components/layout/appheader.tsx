@@ -42,7 +42,7 @@ const AppHeader: React.FC = () => {
               Dashboard
             </NavLink>
             {/* Add other main navigation links here as they become available in App.tsx */}
-            {/* Example: <NavLink to=\"/features\" className={navLinkClasses}><Star className=\"h-4 w-4\" />Features</NavLink> */}
+            {/* Example: <NavLink to="/features" className={navLinkClasses}><Star className="h-4 w-4" />Features</NavLink> */}
           </nav>
         </div>
 
