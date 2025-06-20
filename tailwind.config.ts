@@ -52,7 +52,7 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
+				sidebar: { // Sidebar colors remain mapped, using their existing CSS variables
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
 					primary: 'hsl(var(--sidebar-primary))',
@@ -63,11 +63,19 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			borderRadius: {
+			borderRadius: { // These will now use the updated --radius CSS variable (0.375rem)
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			// Font family setup in Tailwind config could be an alternative,
+			// but current CSS approach with .font-body and .font-heading utility classes
+			// and applying them in @layer base works fine with the CSS variables.
+			// If you prefer to use `font-sans` directly from Tailwind, you could add:
+			// fontFamily: {
+			//   sans: ['var(--font-body)', /* other fallbacks */],
+			//   heading: ['var(--font-heading)', /* other fallbacks */],
+			// },
 			keyframes: {
 				'accordion-down': {
 					from: {
