@@ -12,6 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import ThemeToggleButton from '@/components/ThemeToggleButton'; // Added import
 
 const AppHeader: React.FC = () => {
   console.log('AppHeader loaded');
@@ -54,6 +55,8 @@ const AppHeader: React.FC = () => {
               className="w-full rounded-lg bg-muted pl-8 md:w-[150px] lg:w-[250px] focus-visible:ring-primary"
             />
           </div>
+
+          <ThemeToggleButton /> {/* Added ThemeToggleButton here */}
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
